@@ -6,7 +6,6 @@ import { AfterViewInit, Component, ElementRef, Input, input, ViewChild } from '@
 import { Chart } from 'chart.js/auto';
 @Component({
   selector: 'app-summary-cards',
-  standalone: true,
   imports: [NgChartsModule],
   templateUrl: './summary-cards.component.html',
   styleUrl: './summary-cards.component.scss'

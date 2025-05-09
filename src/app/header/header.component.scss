@@ -62,9 +62,20 @@
   font-size: 14px;
   color: #64748b;
 }
-.integrations-label {
-  font-size: 18px;
-  font-weight: 600;
-  color: #0f172a;
-  margin-right: 12px;
+
+@media (max-width: 767px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .year-selector {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .summary-metrics {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

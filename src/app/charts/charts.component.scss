@@ -67,3 +67,9 @@ canvas {
   height: 300px;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}

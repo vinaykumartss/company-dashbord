@@ -8,7 +8,6 @@ import { NgChartsModule } from 'ng2-charts';
 
 @Component({
   selector: 'app-charts',
-  standalone: true,
   imports: [CommonModule, NgChartsModule],
   templateUrl: './charts.component.html',
   styleUrl: './charts.component.scss'
@@ -113,11 +112,7 @@ export class ChartsComponent implements OnInit {
       maintainAspectRatio: false,
       plugins: {
         legend: {
-          position: 'top',
-          labels: {
-            font: { size: 14 },
-            color: '#374151',
-          },
+          display:false
         },
         tooltip: {
           callbacks: {
