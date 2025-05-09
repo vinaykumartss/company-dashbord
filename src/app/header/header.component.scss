@@ -4,24 +4,61 @@
   justify-content: space-between;
   gap: 20px;
   background: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 24px;
+  border-radius: 12px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   font-family: 'Inter', sans-serif;
+  margin-bottom: 24px;
 }
 
-.company-name,
-.summary-title {
-  font-size: 16px;
-  color: #1a1a1a;
+.company-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
 }
 
 .year-selector {
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 10px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
   font-size: 14px;
-  color: #333;
+  color: #1e293b;
   appearance: none;
   background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  min-width: 250px;
+}
+
+.timesheet-summary {
+  text-align: right;
+}
+
+.summary-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.summary-metrics {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-end;
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.metric-label {
+  font-size: 14px;
+  color: #64748b;
 }

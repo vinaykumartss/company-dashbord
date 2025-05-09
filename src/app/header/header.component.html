@@ -4,6 +4,19 @@
   <select [(ngModel)]="selectedYear" (change)="onYearChange()" class="year-selector">
     <option *ngFor="let year of availableYears" [value]="year">{{year}}</option>
   </select>
+  
+  <!-- <div class="timesheet-summary">
+    <div class="summary-title"><strong>Timesheet Summary</strong></div>
 
-  <div class="summary-title"><strong>Timesheet Summary</strong></div>
+    <div class="summary-metrics">
+      <div class="metric">
+        <div class="metric-value">234</div>
+        <div class="metric-label">Created</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">260</div>
+        <div class="metric-label">Expected</div>
+      </div>
+    </div>
+  </div> -->
 </div>

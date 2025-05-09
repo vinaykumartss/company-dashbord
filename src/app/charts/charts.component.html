@@ -1,8 +1,38 @@
 <div class="charts-grid">
   <div class="chart-card" *ngIf="isBrowser">
     <h3>Hours per Project</h3>
+    <div class="chart-legend">
+      <div class="legend-item">
+        <span class="legend-color" style="background-color: #1e40af;"></span>
+        <span class="legend-label">Tracked</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-color" style="background-color: #60a5fa;"></span>
+        <span class="legend-label">Expected</span>
+      </div>
+    </div>
     <canvas baseChart [data]="projectHoursChartData" [options]="horizontalBarChartOptions" [type]="'bar'">
     </canvas>
+  </div>
+
+  <div class="chart-card" *ngIf="isBrowser">
+    <h3>Hours per Employee</h3>
+    <div class="chart-legend">
+      <div class="legend-item">
+        <span class="legend-color" style="background-color: #3b82f6;"></span>
+        <span class="legend-label">Tracked</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-color" style="background-color: #cbd5e1;"></span>
+        <span class="legend-label">Expected</span>
+      </div>
+    </div>
+    <canvas
+        baseChart
+        [data]="employeeLineChartData"
+        [options]="lineChartOptions"
+        [type]="'line'">
+      </canvas>
   </div>
 
   <div class="chart-card" *ngIf="isBrowser">
@@ -11,26 +41,9 @@
     </canvas>
   </div>
 
-
-  <div class="chart-container" *ngIf="isBrowser">
-    <div class="chart-header">
-      <h3>Hours per Employee</h3>
-    </div>
-    <div class="chart-body">
-      <canvas
-        baseChart
-        [data]="employeeLineChartData"
-        [options]="lineChartOptions"
-        [type]="'line'">
-      </canvas>
-    </div>
-  </div>
+<!-- <div class="chart-card" *ngIf="isBrowser">
+  <h3>Timesheets Trend</h3>
+  <canvas baseChart [data]="employeeTimesheetChartData" [options]="verticalBarChartOptions"  [type]="'bar'"></canvas>
+</div> -->
   
-
-  <!-- <div class="chart-card" *ngIf="isBrowser">
-    <h3>Timesheets Trend</h3>
-    <canvas baseChart [data]="employeeTimesheetChartData" [options]="verticalBarChartOptions"  [type]="'bar'"></canvas>
-  </div> -->
-  
-
 </div>

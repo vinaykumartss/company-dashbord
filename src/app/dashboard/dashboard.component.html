@@ -2,20 +2,17 @@
   <div class="header-container">
     <app-header (yearChanged)="handleYearChange($event)"></app-header>
   </div>
-  <div class="integration">
-    <span class="integration-label">Active Integrations</span>
+  <div class="integrations-container">
+    <span class="integrations-label">Active Integrations:</span>
 
-    <div
-      class="integration-item"
-      *ngFor="let integration of client.activeIntegrations"
-    >
-      <div class="integration-section">
-        <span class="material-symbols-outlined integration-icon">add</span>
-      </div>
-      <span class="integration-name">{{ integration }}</span>
+    <div class="integrations-list">
+      <ng-container *ngFor="let integration of client.activeIntegrations; let i = index">
+        <span *ngIf="i > 0" class="integration-separator">, </span>
+        <span class="integration-name">{{ integration }}</span>
+      </ng-container>
     </div>
   </div>
 
-  <app-summary-cards [summaryData] ="selectedResult?.yearlyChartData"></app-summary-cards>
+  <app-summary-cards [summaryData]="selectedResult?.yearlyChartData"></app-summary-cards>
   <app-charts></app-charts>
 </div>
