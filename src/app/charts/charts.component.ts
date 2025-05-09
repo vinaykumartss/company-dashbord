@@ -68,12 +68,16 @@ export class ChartsComponent implements OnInit {
       },
       scales: {
         x: {
-          grid: { color: '#f3f4f6' },
+          grid: {
+            display: false
+          },
           ticks: { font: { size: 14 } }
         },
         y: {
           beginAtZero: true,
-          grid: { color: '#f3f4f6' },
+          grid: {
+            display: false
+          },
           ticks: { stepSize: 10 }
         }
       }
@@ -129,7 +133,9 @@ export class ChartsComponent implements OnInit {
             font: { size: 12 },
             color: '#4b5563',
           },
-          grid: { color: '#e5e7eb' }
+          grid: {
+            display: false
+          }
         },
         x: {
           type: 'category',
@@ -137,7 +143,9 @@ export class ChartsComponent implements OnInit {
             font: { size: 14 },
             color: '#4b5563',
           },
-          grid: { color: '#e5e7eb' }
+          grid: {
+            display: false
+          }
         }
       }
     };
@@ -146,12 +154,17 @@ export class ChartsComponent implements OnInit {
       maintainAspectRatio: false,
       scales: {
         x: {
-          grid: { color: 'rgba(0, 0, 0, 0.1)' },
+          grid: {
+            display: false
+          },
           ticks: { font: { size: 12 } }
         },
         y: {
-          grid: { color: 'rgba(0, 0, 0, 0.1)' },
-          ticks: { font: { size: 12 } }
+          grid: {
+            display: false
+          },
+          ticks: { font: { size: 12 } },
+          
         }
       },
       plugins: {
@@ -210,16 +223,17 @@ export class ChartsComponent implements OnInit {
         {
           data:  data?.lineChartData?.datasets[0].data,
           label: 'Tracked',
-          fill: false,
+          fill: true,
           borderColor: '#3b82f6',
           tension: 0.4,
           pointBackgroundColor: '#3b82f6',
           pointBorderColor: '#3b82f6',
+    
         },
         {
           data:  data?.lineChartData?.datasets[1].data,
           label: 'Expected',
-          fill: false,
+          fill: true,
           borderColor: '#9ca3af',
           tension: 0.4,
           pointBackgroundColor: '#9ca3af',
