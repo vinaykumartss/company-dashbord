@@ -14,5 +14,5 @@
   </div>
 
   <app-summary-cards [summaryData]="selectedResult?.yearlyChartData"></app-summary-cards>
-  <app-charts></app-charts>
+  <app-charts [chartData] = "selectedResult"></app-charts>
 </div>

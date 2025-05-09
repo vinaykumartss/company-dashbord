@@ -13,40 +13,49 @@ import { Chart } from 'chart.js/auto';
 })
 export class SummaryCardsComponent implements AfterViewInit {
   private viewInitialized = false;
-
   private _summaryData: any = {};
+
+  private overallChart: Chart | undefined;
+  private timesheetChart: Chart | undefined;
+  private projectsChart: Chart | undefined;
+
   @ViewChild('overallCanvas') overallCanvas!: ElementRef;
   @ViewChild('timesheetCanvas') timesheetCanvas!: ElementRef;
   @ViewChild('projectsCanvas') projectsCanvas!: ElementRef;
+
   @Input()
   set summaryData(value: any) {
-    
     this._summaryData = value;
     if (this.viewInitialized) {
-      this.createOverallChart();
-      this.createTimesheetChart();
-      this.createProjectsChart();
+      this.updateCharts();
     }
   }
 
   get summaryData(): any {
     return this._summaryData;
   }
+
   constructor() { }
 
   ngAfterViewInit(): void {
     this.viewInitialized = true;
     if (this._summaryData) {
-      this.createOverallChart();
-      this.createTimesheetChart();
-      this.createProjectsChart();
+      this.updateCharts();
     }
   }
 
-
+  updateCharts(): void {
+    this.createOverallChart();
+    this.createTimesheetChart();
+    this.createProjectsChart();
+  }
 
   createOverallChart(): void {
-    new Chart(this.overallCanvas.nativeElement, {
+    if (this.overallChart) {
+      this.overallChart.destroy();
+    }
+
+    this.overallChart = new Chart(this.overallCanvas.nativeElement, {
       type: 'doughnut',
       data: {
         labels: this._summaryData?.overall?.labels,
@@ -60,25 +69,28 @@ export class SummaryCardsComponent implements AfterViewInit {
           legend: {
             display: true,
             labels: {
-              color: '#333', // Legend text color
+              color: '#333',
               font: {
                 size: 10,
                 weight: 'bold',
                 family: 'Arial, sans-serif'
               },
-              boxWidth: 6, // Size of the color box
-              padding: 10 // Space between legend items
+              boxWidth: 6,
+              padding: 10
             }
           }
         },
-
         cutout: '85%'
       }
     });
   }
 
   createTimesheetChart(): void {
-    new Chart(this.timesheetCanvas.nativeElement, {
+    if (this.timesheetChart) {
+      this.timesheetChart.destroy();
+    }
+
+    this.timesheetChart = new Chart(this.timesheetCanvas.nativeElement, {
       type: 'doughnut',
       data: {
         labels: this._summaryData?.timesheet?.labels,
@@ -92,25 +104,28 @@ export class SummaryCardsComponent implements AfterViewInit {
           legend: {
             display: true,
             labels: {
-              color: '#333', // Legend text color
+              color: '#333',
               font: {
                 size: 10,
                 weight: 'bold',
                 family: 'Arial, sans-serif'
               },
-              boxWidth: 6, // Size of the color box
-              padding: 10 // Space between legend items
+              boxWidth: 6,
+              padding: 10
             }
           }
         },
-
         cutout: '85%'
       }
     });
   }
 
   createProjectsChart(): void {
-    new Chart(this.projectsCanvas.nativeElement, {
+    if (this.projectsChart) {
+      this.projectsChart.destroy();
+    }
+
+    this.projectsChart = new Chart(this.projectsCanvas.nativeElement, {
       type: 'doughnut',
       data: {
         labels: this._summaryData?.projects?.labels,
@@ -129,5 +144,4 @@ export class SummaryCardsComponent implements AfterViewInit {
       }
     });
   }
-
 }
