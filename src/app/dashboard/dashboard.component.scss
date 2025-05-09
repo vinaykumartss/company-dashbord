@@ -1,0 +1,64 @@
+.dashboard-container {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    
+    .header-container{
+        margin-bottom: 10px;
+    }
+  }
+  
+  .integration {
+    margin-bottom: 10px;
+  }
+  
+  .integration-label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+  
+  .integration-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #2563eb;
+  }
+  
+  .integration-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    background-color: #1d4ed8;
+    width: 24px;
+    height: 24px;
+    transform: rotate(45deg); 
+  }
+  
+  .integration-icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    transform: rotate(-45deg); 
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .integration-icon:hover {
+    color: #e0e7ff;
+  }
+  
+  .integration-name {
+    font-size: 1rem;
+    color:#2563eb;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  

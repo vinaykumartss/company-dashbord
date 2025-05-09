@@ -1,0 +1,21 @@
+<div class="dashboard-container">
+  <div class="header-container">
+    <app-header (yearChanged)="handleYearChange($event)"></app-header>
+  </div>
+  <div class="integration">
+    <span class="integration-label">Active Integrations</span>
+
+    <div
+      class="integration-item"
+      *ngFor="let integration of client.activeIntegrations"
+    >
+      <div class="integration-section">
+        <span class="material-symbols-outlined integration-icon">add</span>
+      </div>
+      <span class="integration-name">{{ integration }}</span>
+    </div>
+  </div>
+
+  <app-summary-cards [summaryData] ="selectedResult?.yearlyChartData"></app-summary-cards>
+  <app-charts></app-charts>
+</div>

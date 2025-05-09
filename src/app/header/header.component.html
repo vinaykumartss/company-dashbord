@@ -1,0 +1,9 @@
+<div class="header-container">
+  <div class="company-name"><strong>LittleBee, Inc.</strong></div>
+
+  <select [(ngModel)]="selectedYear" (change)="onYearChange()" class="year-selector">
+    <option *ngFor="let year of availableYears" [value]="year">{{year}}</option>
+  </select>
+
+  <div class="summary-title"><strong>Timesheet Summary</strong></div>
+</div>

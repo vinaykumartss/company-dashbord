@@ -1,0 +1,151 @@
+{
+  
+    "2023": {
+      "projectHoursChartData": {
+        "labels": ["Wallmart", "Apple", "Fedex", "Jio", "Tcs"],
+        "datasets": [
+          { "data": [350, 275, 220, 190, 165], "label": "Hours" }
+        ]
+      },
+      "employeeTimesheetChartData": {
+        "labels": ["Alice", "Nova", "Lio", "Trump"],
+        "datasets": [
+          { "data": [95, 88, 82, 72], "label": "Tracked" },
+          { "data": [75, 70, 68, 60], "label": "Expected" }
+        ]
+      },
+      "lineChartData": {
+        "labels": ["Employee A", "Employee B", "Employee C", "Employee D"],
+        "datasets": [
+          { "data": [11, 9, 7, 7], "label": "Tracked" },
+          { "data": [6, 5, 4, 4], "label": "Expected" }
+        ]
+      },
+      "timeSheetBarData": {
+        "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
+        "datasets": [
+          { "label": "Timesheets Submitted", "data": [45, 72, 55, 60, 80] }
+        ]
+      },
+      "employeeLineChartData": {
+        "labels": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+        "datasets": [
+          { "label": "Employee A", "data": [8, 7, 9, 6, 8] },
+          { "label": "Employee B", "data": [7, 8, 8, 7, 6] }
+        ]
+      },
+      "yearlyChartData": {
+        "overall": {
+          "labels": ["Worked", "Remaining"],
+          "data": [20, 80]
+        },
+        "timesheet": {
+          "labels": ["Filled", "Missing"],
+          "data": [50, 50]
+        },
+        "projects": {
+          "labels": ["Completed", "Ongoing"],
+          "data": [10, 6]
+        }
+      }
+    },
+    "2024": {
+      "projectHoursChartData": {
+        "labels": ["Wallmart", "Apple", "Fedex", "Jio", "Tcs"],
+        "datasets": [
+          { "data": [360, 290, 230, 200, 175], "label": "Hours" }
+        ]
+      },
+      "employeeTimesheetChartData": {
+        "labels": ["Alice", "Nova", "Lio", "Trump"],
+        "datasets": [
+          { "data": [90, 85, 80, 70], "label": "Tracked" },
+          { "data": [78, 72, 69, 63], "label": "Expected" }
+        ]
+      },
+      "lineChartData": {
+        "labels": ["Employee A", "Employee B", "Employee C", "Employee D"],
+        "datasets": [
+          { "data": [12, 10, 8, 8], "label": "Tracked" },
+          { "data": [7, 6, 5, 5], "label": "Expected" }
+        ]
+      },
+      "timeSheetBarData": {
+        "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
+        "datasets": [
+          { "label": "Timesheets Submitted", "data": [48, 74, 58, 63, 85] }
+        ]
+      },
+      "employeeLineChartData": {
+        "labels": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+        "datasets": [
+          { "label": "Employee A", "data": [9, 8, 9, 7, 8] },
+          { "label": "Employee B", "data": [8, 8, 9, 7, 7] }
+        ]
+      },
+      "yearlyChartData": {
+        "overall": {
+          "labels": ["Worked", "Remaining"],
+          "data": [30, 70]
+        },
+        "timesheet": {
+          "labels": ["Filled", "Missing"],
+          "data": [40, 60]
+        },
+        "projects": {
+          "labels": ["Completed", "Ongoing"],
+          "data": [7, 5]
+        }
+      }
+    },
+    "2025": {
+      "projectHoursChartData": {
+        "labels": ["Wallmart", "Apple", "Fedex", "Jio", "Tcs"],
+        "datasets": [
+          { "data": [370, 300, 240, 210, 180], "label": "Hours" }
+        ]
+      },
+      "employeeTimesheetChartData": {
+        "labels": ["Alice", "Nova", "Lio", "Trump"],
+        "datasets": [
+          { "data": [92, 89, 84, 75], "label": "Tracked" },
+          { "data": [80, 75, 70, 66], "label": "Expected" }
+        ]
+      },
+      "lineChartData": {
+        "labels": ["Employee A", "Employee B", "Employee C", "Employee D"],
+        "datasets": [
+          { "data": [13, 11, 9, 9], "label": "Tracked" },
+          { "data": [8, 7, 6, 6], "label": "Expected" }
+        ]
+      },
+      "timeSheetBarData": {
+        "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
+        "datasets": [
+          { "label": "Timesheets Submitted", "data": [50, 76, 60, 66, 90] }
+        ]
+      },
+      "employeeLineChartData": {
+        "labels": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+        "datasets": [
+          { "label": "Employee A", "data": [9, 9, 10, 8, 9] },
+          { "label": "Employee B", "data": [8, 9, 9, 8, 8] }
+        ]
+      },
+      "yearlyChartData": {
+        "overall": {
+          "labels": ["Worked", "Remaining"],
+          "data": [90, 10]
+        },
+        "timesheet": {
+          "labels": ["Filled", "Missing"],
+          "data": [30, 70]
+        },
+        "projects": {
+          "labels": ["Completed", "Ongoing"],
+          "data": [7, 5]
+        }
+      }
+    }
+  }
+  
